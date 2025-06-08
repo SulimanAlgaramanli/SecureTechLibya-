@@ -3,11 +3,13 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
+    return view('index');
+});
 
-    $title = "title from fun";
-    $text = "text from fun";
-    return view('index', [
-        'title' => $title,
-        'text' => $text,
-    ]);
+Route::get('/about', function () {
+    return view('about');
+});
+
+Route::get('/contact', function () {
+    return view('contact');
 });

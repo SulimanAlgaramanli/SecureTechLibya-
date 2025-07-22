@@ -3,13 +3,20 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('index');
+
+    $test = "hello1";
+    $test2 = "hello2";
+
+    return view('index',[
+        't'=> "Hello, Suleiman",
+        't2'=> $test2,
+    ]);
 });
 
 Route::get('/about', function () {
     return view('about');
 });
 
-Route::get('/contact', function () {
-    return view('contact');
+Route::get('/products', function () {
+    return view('products');
 });
